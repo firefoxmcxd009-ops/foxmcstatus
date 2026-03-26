@@ -17,6 +17,7 @@
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="/logo.svg" />
 
+  <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="/Tools/Bot/style.css">
 
@@ -25,15 +26,14 @@
 https://cdn.jsdelivr.net/npm/@icon/line-awesome@1.3.0-alpha.0/line-awesome.min.css
 " rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/@icon/line-awesome/line-awesome.css">
-  <script type="text/javascript" src="app.js" defer></script>
+  <script type="text/javascript" src="/app.js" defer></script>
 </head>
 <body>
 
   <!-- Header -->
    <header>
     <div class="logo">
-      <a href="">
-        <!-- Bot Logo -->
+      <!-- Bot Logo -->
       <div class="container">
     <div class="bot" id="bot">
         <div class="head">
@@ -54,7 +54,6 @@ https://cdn.jsdelivr.net/npm/@icon/line-awesome@1.3.0-alpha.0/line-awesome.min.c
 </div>
 <!-- Web Title -->
       <h1>Fox Mcstatus</h1>
-      </a>
     </div>
    </header>
 
@@ -138,49 +137,35 @@ https://cdn.jsdelivr.net/npm/@icon/line-awesome@1.3.0-alpha.0/line-awesome.min.c
 
   <!------ Welcome To Fox Mcstatus-------->
   <div class="content">
-    <h3>Welcome</h3>
-    <p>What are you looking for? Start use my tools for free now!.</p>
+    <h3>Status Server</h3>
+    <p>Type Minecraft Server Ip to check server status!</p>
   </div>
  
   <!-- Content Box -->
-<div class="content-box">
-  <div class="box">
-    <h4 class="ticket">Server</h4>
-    <p class="server">Join My Minecraft server with another players!</p>
-    <a href="#" class="link"><li class="list">Ip: ***</li></a>
-    <a href="#" class="link"><li class="list">Port: 19234</li></a>
-    <a href="https://firefoxmckingdom.vercel.app" class="link"><li class="list">Store</li></a>
-    <button class="join-btn" onclick="copy(this)">Copy</button>
-  </div>
-  
-  <form action="">
-    <div class="box">
-    <h4 class="ticket">Tools</h4>
-    <p class="server">Use our some tools. There're:</p>
-    <a href="#" class="link"><li class="list">Status</li></a>
-    <a href="#" class="link"><li class="list">Skins</li></a>
-    <a href="#" class="link"><li class="list">Bot</li></a>
-    <button class="join-btn">Use</button>
-  </div>
-  </form>
-  
-  <div class="box">
-    <h4 class="ticket">Status</h4>
-    <p class="server">Search any Minecraft server to to check status.</p>
-    <button class="join-btn">View</button>
-  </div>
+   <div class="containers">
 
-  <form action="">
-    <div class="box">
-    <h4 class="ticket">Bot</h4>
-    <p class="server">Join My Minecraft server with another players!</p>
-    <button class="join-btn">Chat</button>
+    <div class="search">
+      <input type="text" id="ip" placeholder="Enter Server IP">
+      <button class="check" onclick="getStatus()">Check</button>
     </div>
-  </form>
+
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Result -->
+    <div class="card" id="result">
+        <img id="icon">
+        <h2 id="serverIP"></h2>
+        <p id="version"></p>
+        <p id="players"></p>
+    </div>
 </div>
 
     <!-- JavaScript -->
-     <script src="/Tools/Bot/script.js"></script>
+     <script src="/Tools//Bot/script.js"></script>
+     <script src="script.js"></script>
     <script src="
 https://cdn.jsdelivr.net/npm/@icon/line-awesome@1.3.0-alpha.0/importer.min.js
 "></script>
