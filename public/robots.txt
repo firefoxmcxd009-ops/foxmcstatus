@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://foxmcstatus.vercel.app/api/sitemap
+Sitemap: https://foxmcstatus.vercel.app/sitemap.xml
