@@ -1,0 +1,87 @@
+/* 3D container */
+.container {
+    position: absolute;
+    perspective: 1000px;
+    scale: 0.215;
+    left: -105px;
+    top: -92.5px;
+}
+@media (max-width: 768px) {
+    .container {scale: 0.18;}
+} 
+.bot {
+    width: 300px;
+    height: 260px;
+    transform-style: preserve-3d;
+    transition: transform 0.1s ease-out;
+}
+
+/* Head */
+.head {
+    width: 100%;
+    height: 180px;
+    background: linear-gradient(135deg, #ff00cc, #7b5cff);
+    border-radius: 40px;
+    position: relative;
+    box-shadow: 0 0 60px rgba(242, 0, 255, 0.4);
+}
+
+/* Face */
+.face {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    width: 220px;
+    height: 100px;
+    background: #eee;
+    border-radius: 25px;
+}
+
+/* Eye container */
+.eye {
+    width: 50px;
+    height: 60px;
+    background: transparent;
+    position: absolute;
+    top: 20px;
+    overflow: hidden;
+}
+.eye.left { left: 40px; }
+.eye.right { right: 40px; }
+.eye.blink {
+    animation: blink 0.2s;
+}
+@keyframes blink {
+    0% {
+        transform: scaleY(1);
+    }
+    50% {
+        transform: scaleY(0.1);
+    }
+    0% {
+        transform: scaleY(1);
+    }
+}
+/* Pupil */
+.pupil {
+    width: 30px;
+    height: 45px;
+    background: linear-gradient(135deg, #ff00cc, #7b5cff);
+    border-radius: 50%;
+    position: absolute;
+    top: 7px;
+    left: 10px;
+    transition: transform 0.05s linear;
+}
+
+/* Tail */
+.tail {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #ff00cc, #7b5cff);
+    position: absolute;
+    bottom: -15px;
+    left: 40px;
+    transform: rotate(45deg);
+    border-radius: 10px;
+}

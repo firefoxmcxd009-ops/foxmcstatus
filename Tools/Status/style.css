@@ -1,0 +1,147 @@
+.containers {
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.search {
+    position: relative;
+    top: 40px;
+    display: flex;
+    gap: 1rem;
+    margin: auto;
+    justify-content: center;
+}
+input {
+    padding: 10px;
+    display: block;
+    width: 50%;
+    border: none;
+    clip-path: polygon(
+        5px 0,
+        100% 0,
+        100% calc(100% - 5px),
+        calc(100% - 5px) 100%,
+        0 100%,
+        0 5px
+    );
+    color: #000000;
+    font-weight: bolder;
+    outline: none;
+}
+
+button {
+    padding: 12px;
+    border: none;
+    background: #6200ff;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+input, .check {
+    backdrop-filter: drop-shadow(0px 0px 5px #6200ff);
+}
+.check {
+    display: block;
+    clip-path: polygon(
+        5px 0,
+        100% 0,
+        100% calc(100% - 5px),
+        calc(100% - 5px) 100%,
+        0 100%,
+        0 5px
+    );
+    font-weight: bolder;
+}
+
+button:hover {
+    background: #aa00ff;
+}
+
+.card {
+    text-align: center;
+    position: relative;
+    margin: auto;
+    margin-top: 60px;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+    background: #2734472b;
+    border: 1.5px solid #c2baba0c;
+    border-radius: 15px;
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+img {
+    position: relative;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    margin-bottom: 5px;
+}
+#serverIP {
+    position: relative;
+    font-size: 25px;
+    text-align: center;
+    justify-content: center;
+    background: linear-gradient(to right, #00b7ff, #c300ff, #ffffff);
+    color: transparent;
+  -webkit-background-clip: text;
+}
+#version, #players {
+    position: relative;
+    margin-top: -20px;
+    font-size: 12.5px;
+}
+
+/* Loader */
+.loader {
+    margin-top: 70px;
+    display: none;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 5px solid #334155;
+    border-top: 5px solid #ff00aa;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(10px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+@media (max-width: 728px) {
+    .search {
+        position: relative;
+        margin: auto;
+        z-index: 0;
+    }
+    input {
+        width: 35%;
+    }
+    .check {
+        padding: 10px;
+    }
+    #serverIP {
+        font-size: 15px;
+    }
+}
