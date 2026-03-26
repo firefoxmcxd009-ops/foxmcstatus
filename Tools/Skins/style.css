@@ -27,7 +27,8 @@ input {
     );
   flex: 1;
   font-weight: bolder;
-  padding: 10px;
+  padding: 12px;
+  width: 50%
   border: none;
   outline: none;
 }
