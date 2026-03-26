@@ -1,35 +1,52 @@
-async function getStatus() {
-    let ip = document.getElementById("ip").value;
+const usernameInput = document.getElementById("username");
+const searchBtn = document.getElementById("searchBtn");
+const img = document.getElementById("skinImg");
+const downloadBtn = document.getElementById("downloadBtn");
+const loader = document.getElementById("loader");
+const errorText = document.getElementById("error");
 
-    let loader = document.getElementById("loader");
-    let result = document.getElementById("result");
+// SEARCH FUNCTION
+function searchSkin() {
+  const username = usernameInput.value.trim();
 
-    loader.style.display = "block";
-    result.style.display = "none";
+  if (!username) {
+    errorText.textContent = "Please enter username!";
+    return;
+  }
 
-    try {
-        let res = await fetch(`https://api.mcsrvstat.us/2/${ip}`);
-        let data = await res.json();
+  errorText.textContent = "";
+  loader.style.display = "block";
+  img.style.display = "none";
+  downloadBtn.style.display = "none";
 
-        loader.style.display = "none";
+  const headURL = `https://mineskin.eu/armor/body/${username}`;
+  const downloadURL = `https://mineskin.eu/download/${username}`;
 
-        if (data.online) {
-            result.style.display = "block";
+  const testImg = new Image();
+  testImg.src = headURL;
 
-            document.getElementById("serverIP").innerText = ip;
-            document.getElementById("version").innerText = "Version: " + data.version;
-            document.getElementById("players").innerText = "Players: " + data.players.online + "/" + data.players.max;
+  testImg.onload = () => {
+    img.src = headURL;
+    img.style.display = "block";
 
-            if (data.icon) {
-                document.getElementById("icon").src = data.icon;
-            }
-        } else {
-            alert("Server Offline ❌");
-        }
+    downloadBtn.href = downloadURL;
+    downloadBtn.style.display = "inline-block";
 
-    } catch (error) {
-        loader.style.display = "none";
-        alert("Error fetching server ⚠️!\nCheck internet connection and try again :)");
-    }
+    loader.style.display = "none";
+  };
 
+  testImg.onerror = () => {
+    loader.style.display = "none";
+    errorText.textContent = "Username not found!";
+  };
 }
+
+// BUTTON CLICK
+searchBtn.addEventListener("click", searchSkin);
+
+// ENTER KEY
+usernameInput.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    searchSkin();
+  }
+});
