@@ -20,7 +20,7 @@ h1 {
 input {
     padding: 10px;
     display: block;
-    width: 40%;
+    width: 50%;
     border: none;
     clip-path: polygon(
         5px 0,
@@ -117,6 +117,15 @@ img {
     border-radius: 50%;
     animation: spin 1s linear infinite;
     margin: auto;
+}
+
+#error {
+    position: relative;
+    top: 100px;
+    color: #ff0000;
+    margin: auto;
+    text-align: center;
+    display: none;
 }
 
 @keyframes spin {

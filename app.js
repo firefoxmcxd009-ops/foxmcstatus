@@ -31,14 +31,15 @@ function closeAllSubMenus(){
 }
 
 // =================== //
-// ==== copy to  Clipboard ==== //
+// ==== Clipboard ==== //
 // =================== //
 function copy() {
-    navigator.clipboard.writeText("***")
-    .then(() => {
-        alert("Copied!");
-    })
-    .catch(err => {
-        console.err("Error:, err");
-    });
-}
+  const popup = document.getElementById("popup");
+  navigator.clipboard.writeText("***");
+
+  popup.classList.add("show");
+
+  setTimeout(() => {
+    popup.classList.remove("show");
+  }, 2000);
+};

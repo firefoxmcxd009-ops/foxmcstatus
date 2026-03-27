@@ -2,6 +2,7 @@ async function getStatus() {
     let ip = document.getElementById("ip").value;
 
     let loader = document.getElementById("loader");
+    let text = document.getElementById("error");
     let result = document.getElementById("result");
 
     loader.style.display = "block";
@@ -15,6 +16,7 @@ async function getStatus() {
 
         if (data.online) {
             result.style.display = "block";
+            text.style.display = "none";
 
             document.getElementById("serverIP").innerText = ip;
             document.getElementById("version").innerText = "Version: " + data.version;
@@ -24,12 +26,13 @@ async function getStatus() {
                 document.getElementById("icon").src = data.icon;
             }
         } else {
-            alert("Server Offline ❌");
+            text.textContent = `Server is Offline!`;
+            text.style.display = "block";
         }
 
     } catch (error) {
         loader.style.display = "none";
-        alert("Error fetching server ⚠️!\nCheck internet connection and try again :)");
+        text.textContent = `Error Loading server...`;
+        text.style.display = "block";
     }
-
 }

@@ -295,7 +295,26 @@ button {
     cursor: pointer;
     bottom: 0;
 }
-
+/* Popup */
+#popup {
+  position: fixed;
+  bottom: 30px;
+  bottom: 35px;
+  background: #000000d2;
+  backdrop-filter: blur(50px);
+  border-radius: 2px 7px;
+  border: 1px solid #9b9b9b23;
+  width: 100px;
+  height: 45px;
+  color: white;
+  padding: 10px 20px;
+  opacity: 0;
+  transition: 0.3s;
+}
+/* Show Popup */
+#popup.show {
+  opacity: 1;
+}
 /* Mobile Device */
 @media (max-width: 768px) {
   header .logo h1 {

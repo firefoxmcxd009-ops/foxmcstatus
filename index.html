@@ -17,7 +17,7 @@
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="/logo.svg" />
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/Tools/Bot/style.css">
 
   <!-- Link Cdn -->
@@ -25,7 +25,7 @@
 https://cdn.jsdelivr.net/npm/@icon/line-awesome@1.3.0-alpha.0/line-awesome.min.css
 " rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/@icon/line-awesome/line-awesome.css">
-  <script type="text/javascript" src="app.js" defer></script>
+  <script type="text/javascript" src="/app.js" defer></script>
 </head>
 <body>
 
@@ -149,28 +149,39 @@ https://cdn.jsdelivr.net/npm/@icon/line-awesome@1.3.0-alpha.0/line-awesome.min.c
     <p class="server">Join My Minecraft server with another players!</p>
     <a href="#" class="link"><li class="list">Ip: ***</li></a>
     <a href="#" class="link"><li class="list">Port: 19234</li></a>
-    <a href="https://firefoxmckingdom.vercel.app" class="link"><li class="list">Store</li></a>
+    <a href="#" class="link"><li class="list">Store</li></a>
+    <div id="popup">Copied!</div>
     <button class="join-btn" onclick="copy(this)">Copy</button>
   </div>
   
-  <form action="">
+  <form action="#">
     <div class="box">
     <h4 class="ticket">Tools</h4>
     <p class="server">Use our some tools. There're:</p>
-    <a href="#" class="link"><li class="list">Status</li></a>
-    <a href="#" class="link"><li class="list">Skins</li></a>
-    <a href="#" class="link"><li class="list">Bot</li></a>
-    <button class="join-btn">Use</button>
+    <a href="/Tools/Status" class="link"><li class="list">Status</li></a>
+    <a href="/Tools/Skins" class="link"><li class="list">Skins</li></a>
+    <a href="/Tools/Bot" class="link"><li class="list">Bot</li></a>
+    <button class="join-btn">###</button>
   </div>
   </form>
-  
-  <div class="box">
-    <h4 class="ticket">Status</h4>
-    <p class="server">Search any Minecraft server to to check status.</p>
-    <button class="join-btn">View</button>
-  </div>
 
-  <form action="">
+  <form action="/Tools/Status">
+    <div class="box">
+    <h4 class="ticket">Status</h4>
+    <p class="server">Search any Minecraft server to check status.</p>
+    <button class="join-btn">Search</button>
+    </div>
+  </form>
+
+  <form action="/Tools/Skins">
+    <div class="box">
+    <h4 class="ticket">Skins</h4>
+    <p class="server">Search Skin's Username to download!</p>
+    <button class="join-btn">Search</button>
+    </div>
+  </form>
+
+  <form action="/Tools/Bot">
     <div class="box">
     <h4 class="ticket">Bot</h4>
     <p class="server">Join My Minecraft server with another players!</p>

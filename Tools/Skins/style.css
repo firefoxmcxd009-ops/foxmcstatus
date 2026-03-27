@@ -27,10 +27,13 @@ input {
     );
   flex: 1;
   font-weight: bolder;
-  padding: 12px;
-  width: 35%;
+  padding: 10px;
   border: none;
   outline: none;
+}
+#username {
+  color: rgb(37, 2, 44);
+  text-align: center;
 }
 
 #searchBtn {
