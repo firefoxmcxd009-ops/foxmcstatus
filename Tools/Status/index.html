@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Server Status</title>
+  <title>Status</title>
 
   <!-- Website Icon -->
     <link rel="icon" type="image/svg+xml" href="/logo.svg">
@@ -11,8 +11,8 @@
 
     <!-- Telegram / Facebook / Discord Preview -->
     <meta name="google-site-verification" content="G-1tDenzgFPenEI-Q1QUyJppX0c8VWgXg5txoxpGGIk" />
-    <meta property="og:title" content="Use Best 3 Tools!" />
-    <meta property="og:description" content="View Here!" />
+    <meta property="og:title" content="វាយ server ip ដើម្បីឆែកមើលស្ថានភាព server (server status)" />
+    <meta property="og:description" content="ចុចដើម្បីប្រើ!" />
     <meta property="og:image" content="/logo.svg" />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="/logo.svg" />
@@ -146,7 +146,7 @@ https://cdn.jsdelivr.net/npm/@icon/line-awesome@1.3.0-alpha.0/line-awesome.min.c
 
     <div class="search">
       <input type="text" id="ip" placeholder="Enter Server IP">
-      <button class="check" onclick="getStatus()">Check</button>
+      <button class="check" id="check" onclick="getStatus()">Check</button>
     </div>
 
     <!-- Loader -->
@@ -161,6 +161,7 @@ https://cdn.jsdelivr.net/npm/@icon/line-awesome@1.3.0-alpha.0/line-awesome.min.c
         <img id="icon">
         <h2 id="serverIP"></h2>
         <p id="version"></p>
+        <p id="port"></p>
         <p id="players"></p>
     </div>
 </div>

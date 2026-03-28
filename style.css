@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 :root{
-  --base-clr: #000000be;
+  --base-clr: #00000094;
   --line-clr: #3d3f4a52;
   --hover-clr: #2225338e;
   --text-clr: #e6e6ef;
@@ -90,8 +90,8 @@ header a {
   width: 210px;
   padding: 5px 1em;
   background-color: var(--base-clr);
-  backdrop-filter: blur(10px);
   border-right: 1.5px solid var(--line-clr);
+  backdrop-filter: blur(20px);
 
   position: fixed;
   top: 0;
@@ -185,7 +185,7 @@ header a {
   padding: 1em;
   border: none;
   border-radius: .5em;
-  background: none;
+  background: var(--base-clr);
   cursor: pointer;
   
 
@@ -316,7 +316,7 @@ button {
   opacity: 1;
 }
 /* Mobile Device */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   header .logo h1 {
   font-size: 20px;
   margin-top: 0;
@@ -327,7 +327,7 @@ button {
 
   .content-box {
     display: block;
-    margin: 10px;
+    margin: auto;
     columns: auto;
     grid-template-rows: 1fr 1fr 1fr;
   }
@@ -335,5 +335,75 @@ button {
     justify-content: end;
     width: 75%;
     margin: 10px 70px;
+  }
+}
+
+@media(max-width: 800px){
+  body{
+    grid-template-columns: 1fr;
+  }
+  #sidebar{
+    height: 60px;
+    width: 100%;
+    border-right: none;
+    border-top: 1px solid var(--line-clr);
+    background: #000;
+    backdrop-filter: none ;
+    padding: 0;
+    position: fixed;
+    top: unset;
+    bottom: 0;
+    overflow-y: hidden;
+    scrollbar-width: none;
+
+    > ul{
+      padding: 0;
+      display: grid;
+      grid-auto-columns: 60px;
+      grid-auto-flow: column;
+      align-items: center;
+    }
+    ul li{
+      height: 100%;
+    }
+    ul a, ul .dropdown-btn{
+      width: 60px;
+      height: 60px;
+      padding: 0;
+      border-radius: 0;
+      justify-content: center;
+    }
+
+    ul li span, ul li:first-child, .dropdown-btn svg:last-child{
+      display: none;
+    }
+
+    ul li .sub-menu.show{
+      position: fixed;
+      bottom: 60px;
+      left: 0;
+      box-sizing: border-box;
+      height: 60px;
+      width: 100%;
+      background-color: #00000049;
+      border-top: 1px solid #6c6c6c3a;
+      box-shadow: 0 0 20px #000;
+      backdrop-filter: blur(10px);
+      display: flex;
+      justify-content: center;
+
+      > div{
+        overflow: hidden;
+      }
+      li{
+        display: inline-flex;
+      }
+      a{
+        box-sizing: border-box;
+        padding: 1em;
+        width: auto;
+        justify-content: center;
+      }
+    }
   }
 }

@@ -33,7 +33,7 @@ input {
 }
 #username {
   color: rgb(37, 2, 44);
-  text-align: center;
+  width: 50%;
 }
 
 #searchBtn {

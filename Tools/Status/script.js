@@ -36,3 +36,15 @@ async function getStatus() {
         text.style.display = "block";
     }
 }
+
+const input = document.getElementById("ip");
+const btn = document.getElementById("check");
+
+btn.addEventListener("click", getStatus);
+
+input.addEventListener("keydown", function(e) {
+    if (e.key === "Enter" || e.keyCode === 13) {
+        e.preventDefault();
+        getStatus();
+    }
+});
