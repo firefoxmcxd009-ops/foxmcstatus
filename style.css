@@ -161,6 +161,7 @@ header a {
 #sidebar a span, #sidebar .dropdown-btn span{
   flex-grow: 1;
   user-select: none;
+  scrollbar-width: none;
 }
 #sidebar a:hover, #sidebar .dropdown-btn:hover, #sidebar svg:hover {
   background-color: var(--hover-clr);
@@ -177,6 +178,7 @@ header a {
 }
 #sidebar .sub-menu.show{
   grid-template-rows: 1fr;
+  scrollbar-width: none;
 }
 .dropdown-btn svg{
   transition: 200ms ease;
