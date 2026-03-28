@@ -16,6 +16,7 @@ html{
   user-select: none;
   scroll-behavior: smooth;
   font-family: Poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
 }
 body{
   color: var(--text-clr);
@@ -391,6 +392,7 @@ button {
       backdrop-filter: blur(10px);
       display: flex;
       justify-content: center;
+      overflow-x: auto;
 
       > div{
         overflow: hidden;
