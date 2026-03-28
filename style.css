@@ -12,6 +12,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
 html{
   user-select: none;
   scroll-behavior: smooth;
