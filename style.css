@@ -140,6 +140,7 @@ header a {
   border-bottom: 1.5px solid #3d3d3d25;
 }
 .dropdown-btn{
+  margin: auto;
   width: 100%;
   text-align: left;
   background: none;
@@ -391,10 +392,10 @@ button {
       backdrop-filter: blur(10px);
       display: flex;
       justify-content: center;
-      overflow-x: auto;
+      scroll-behavior: hidden;
 
       > div{
-        overflow: hidden;
+        overflow-x: auto;
       }
       li{
         display: inline-flex;
