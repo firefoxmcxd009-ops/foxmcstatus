@@ -35,7 +35,7 @@ function closeAllSubMenus(){
 // =================== //
 function copy() {
   const popup = document.getElementById("popup");
-  navigator.clipboard.writeText("foxmckingdom.apsara.fun:62080");
+  navigator.clipboard.writeText("foxmckingdom.mcpc.ink:62080");
 
   popup.classList.add("show");
 
