@@ -4,7 +4,7 @@
 const qrImages = {
     vip: "/Server/Store/Payment/qr/vip.png",
     mvp: "/Server/Store/Payment/qr/mvp.png",
-    mvpplus: "/Server/Store/Payment/qr/mvpplus.png",
+    mvpplus: "/Server/Store/Payment/qr/mvp+.png",
     epic: "/Server/qr/Store/Payment/epic.png",
     kingdom: "/Server/Store/Payment/qr/kingdom.png"
 };
