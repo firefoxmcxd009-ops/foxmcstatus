@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Odor+Mean+Chey&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Freehand&display=swap');
 :root{
   --base-clr: #00000094;
   --line-clr: #3d3f4a52;
-  --hover-clr: #2225338e;
+  --hover-clr: #2323232e;
   --text-clr: #e6e6ef;
   --accent-clr: #007bff;
   --secondary-text-clr: #b0b3c1;
@@ -21,30 +23,37 @@ html, body {
 html{
   user-select: none;
   scroll-behavior: smooth;
-  font-family: Poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: sans-serif;
 }
 body{
   color: var(--text-clr);
   background-color: #000;
+  font-family: "Odor Mean Chey", sans-serif;
+  font-weight: 400;
 }
 header {
   width: 100%;
   height: 55px;
-  background-color: #4b009135;
+  background-color: #0f051a84;
   backdrop-filter: blur(20px);
   box-shadow: 0 0 20px #02020292;
   border-bottom: 1.5px solid var(--line-clr);
   position: fixed;
   z-index: 10000;
+  scrollbar-width: none;
 }
 header .logo {
-  padding: 15px 78px;
+  padding: 18px 78px;
   display: flex;
+}
+.logo {
+  font-weight: normal;
+  font-family: sans-serif;
 }
 header .logo h1 {
   font-size: 25px;
   margin-left: 10px;
-  margin-top: -5px;
+  font-weight: 600;
 }
 header a {
   text-decoration: none;
@@ -98,7 +107,8 @@ header a {
   background-color: var(--base-clr);
   border-right: 1.5px solid var(--line-clr);
   backdrop-filter: blur(20px);
-
+  font-family: sans-serif;
+  font-weight: 500;
   position: fixed;
   top: 0;
   align-self: start;
@@ -162,15 +172,18 @@ header a {
   flex-grow: 1;
   user-select: none;
   scrollbar-width: none;
+  font-family: sans-serif;
 }
 #sidebar a:hover, #sidebar .dropdown-btn:hover, #sidebar svg:hover {
   background-color: var(--hover-clr);
-  color: white;
+  color: #ff00a2;
+  fill: #ff00a2;
+  transition: 0.5s ease-in-out;
 }
 #sidebar .sub-menu{
   display: grid;
   grid-template-rows: 0fr;
-  transition: 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
 
   > div{
     overflow: hidden;
@@ -194,7 +207,7 @@ header a {
   padding: 1em;
   border: none;
   border-radius: .5em;
-  background: var(--base-clr);
+  background: #00000031;
   cursor: pointer;
   
 
@@ -219,7 +232,9 @@ header a {
 }
 h3 {
   position: relative;
+  font-family: "Odor Mean Chey", serif;
   font-size: 30px;
+  font-weight:  500;
   background: linear-gradient(to right, #00b7ff, #c300ff, #ffffff);
   color: transparent;
   -webkit-background-clip: text;
@@ -228,11 +243,15 @@ h3 {
 }
 p {
   position: relative;
-  font-weight: bolder;
+  font-weight: normal;
   top: 45px;
   margin: 20px;
 }
+strong {
+  font-family: sans-serif;
+}
 .content-box {
+  position: relative;
   columns: 20px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(415px,1fr));
@@ -240,7 +259,6 @@ p {
 
   margin: 50px;
   justify-content: center;
-  align-items: center;
 }
 .box {
   position: relative;
@@ -253,13 +271,16 @@ p {
   display: block;
   margin: auto;
   top: 40px;
+  transform-style: preserve-3d;
+  transition: transform 0.15s ease;
 }
 .box .ticket {
   position: relative;
+  font-family: sans-serif;
 }
 .ticket {
   background: #008ffd;
-  width: 90px;
+  width: auto;
   clip-path: polygon(
         5px 0,
         100% 0,
@@ -272,11 +293,13 @@ p {
 }
 .server {
   top: 0;
+  font-family: "Freehand", sans-serif;
 }
 .link {
+  font-family: sans-serif;
+  font-weight: 700;
   position: relative;
   top: -15px;
-  text-decoration: underline;
   color: #d3d3d3;
 }
 .list {
@@ -309,14 +332,14 @@ button {
   position: fixed;
   bottom: 30px;
   bottom: 35px;
-  background: #000000d2;
+  background: #000000ef;
   backdrop-filter: blur(50px);
   border-radius: 2px 7px;
   border: 1px solid #9b9b9b23;
   width: 100px;
   height: 45px;
   color: white;
-  padding: 10px 20px;
+  padding: 10px 15px;
   opacity: 0;
   transition: 0.3s;
 }
@@ -328,7 +351,7 @@ button {
 @media (max-width: 800px) {
   header .logo h1 {
   font-size: 20px;
-  margin-top: 0;
+  font-weight: 600;
 }
   #sidebar {
     width: 190px;
@@ -336,14 +359,16 @@ button {
 
   .content-box {
     display: block;
+    justify-content: center;
     margin: auto;
     columns: auto;
-    grid-template-rows: 1fr 1fr 1fr;
   }
   .box {
     justify-content: end;
     width: 75%;
-    margin: 10px 70px;
+    margin: auto;
+    margin-top: 15px;
+    gap: 1rem;
   }
 }
 
@@ -363,7 +388,6 @@ button {
     top: unset;
     bottom: 0;
     overflow-y: hidden;
-    scrollbar-width: none;
 
     > ul{
       padding: 0;
@@ -394,16 +418,16 @@ button {
       box-sizing: border-box;
       height: 60px;
       width: 100%;
-      background-color: #00000049;
+      background-color: #0000009d;
       border-top: 1px solid #6c6c6c3a;
       box-shadow: 0 0 20px #000;
       backdrop-filter: blur(10px);
       display: flex;
       justify-content: center;
-      scroll-behavior: hidden;
 
       > div{
         overflow-x: auto;
+        scrollbar-width: none;
       }
       li{
         display: inline-flex;

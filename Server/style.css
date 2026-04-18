@@ -1,0 +1,243 @@
+ :root {
+  --grd-title: linear-gradient(to right, #ff0000, #ae00ff, #ff00ff, #ff0000);
+  --grd-normorl: linear-gradient(to right, #ffd500ee);
+  --grd-kingdom: linear-gradient(to right, #ff0000, #f200ff, #8800ff, #00b3ff, #26ff00, #ff7b00);
+ }
+h5 /* Gamemode Title */{
+  position: relative;
+  top: 65px;
+  font-family: "Minecraft Bold";
+  font-size: 20px;
+  background-image: var(--grd-title);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  animation: Gradient 5s ease infinite;
+}
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.card {
+    position: relative;
+    top: 70px;
+    width: 50%;
+    height: 100px;
+    background: #1a1a1a54;
+    border-radius: 5px;
+    border: 1.5px solid #b5b5b515;
+    box-shadow: 0 0 20px black;
+    padding: auto;
+    font-family: 'Arial', sans-serif;
+    justify-content: center;
+    margin: auto;
+    display: flex;
+  }
+  #icon {
+    position: relative;
+    display: flex;
+    left: 0;
+    border-radius: 10px;
+    width: 100px;
+  }
+  .data {
+    position: relative;
+    font-family: sans-serif;
+    font-weight: bolder;
+    top: 70px;
+    margin: 0 auto;
+  }
+  #players {
+    position: absolute;
+    font-family: 'Minecraftia', sans-serif;
+    font-size: 12px;
+    top: -15px;
+    right: 0;
+    color: #a5a5a5;
+  }
+  
+  .offline {
+    color: red;
+  }
+  .online {
+    color: #02ce10;
+  }
+  .motd {
+    font-size: 12.5px;
+    top: 20px;
+    margin: 0;
+    font-family: "Minecraft Bold";
+    padding: auto;
+    font-weight: bold;
+    margin: 10px 0;
+    white-space: pre-line;
+  }
+
+  /* Server Content Box */
+  .box-ds {
+    position: relative;
+    margin-top: 50px;
+  }
+  .box {
+    width: 350px;
+    overflow: hidden;
+    transition: 0.3s;
+  }
+  .server {
+    font-family: sans-serif, "freehand";
+  }
+  .link, .Pl-txt {
+    font-size: 12.5px;
+    font-family: 'Minecraftia', sans-serif;
+    font-weight: normal;
+  }
+  .Pl-txt {
+    color: #ee00ff;
+    font-family: "Minecraft Bold";
+  }
+
+  /* Rank Store*/
+  .store {
+    position: relative;
+    margin-top: 85px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .rank-card {
+    background: #1118272d;
+    backdrop-filter: blur(20px);
+    padding: 20px;
+    width: 350px;
+    border-radius: 10px;
+    border: 2px solid #37415125;
+    transition: 0.3s;
+    position: relative;
+    color: #141414;
+  }
+
+  .rank-card:hover, .box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px #c5228171;
+    border-color: #af22c569;
+  }
+
+  .rank {
+    font-size: 22px;
+    font-weight: bolder;
+    margin-bottom: 10px;
+    color: #FFAA00;
+  }
+
+  .price {
+    color: #ffffff;
+    margin: 10px 0;
+  }
+
+  .preview, .buy {
+    clip-path: polygon(
+        5px 0,
+        100% 0,
+        100% calc(100% - 5px),
+        calc(100% - 5px) 100%,
+        0 100%,
+        0 5px
+    );
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    margin: 5px;
+    font-weight: bolder;
+  }
+
+  .buy {
+    background: #3bc522;
+    color: black;
+  }
+
+  .preview {
+    background: #334155;
+    color: white;
+  }
+
+  #previewBox {
+    display: none;
+  }
+
+  #previewBox img {
+    position: relative;
+    width: 250px;
+    border: 3px solid #22c55e;
+    border-radius: 10px;
+    margin: auto;
+    top: 25%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  footer {
+    position: relative;
+    height: 100px;
+    top: 0px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
+    box-shadow: 0 0 20px #70707081;
+  }
+  .footer {
+    position: relative;
+    height: 50px;
+    top: -20px;
+  }
+
+  /* Mobile Width */
+  @media (max-width: 768px) {
+    .card {
+      width: 100%;
+    }
+    .server-ds {
+      top: 0;
+    }
+    .server-box {
+      position: relative;
+      top: 20px;
+      grid-template-columns: 1fr;
+    }
+
+    footer {
+      top: -60px;
+    }
+  }
+
+  /* Minecraft colors */
+  .mc-black { color: #000000; }
+  .mc-darkblue { color: #0000AA; }
+  .mc-darkgreen { color: #00AA00; }
+  .mc-darkcyan { color: #00AAAA; }
+  .mc-darkred { color: #AA0000; }
+  .mc-purple { color: #AA00AA; }
+  .mc-gold { color: #FFAA00; }
+  .mc-gray { color: #AAAAAA; }
+  .mc-darkgray { color: #555555; }
+  .mc-blue { color: #5555FF; }
+  .mc-brightgreen { color: #55FF55; }
+  .mc-cyan { color: #55FFFF; }
+  .mc-red { color: #FF5555; }
+  .mc-pink { color: #FF55FF; }
+  .mc-yellow { color: #FFFF55; }
+  .mc-white { color: #FFFFFF; }

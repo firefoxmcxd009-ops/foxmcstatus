@@ -35,7 +35,7 @@ function closeAllSubMenus(){
 // =================== //
 function copy() {
   const popup = document.getElementById("popup");
-  navigator.clipboard.writeText("***");
+  navigator.clipboard.writeText("foxmckingdom.apsara.fun:62080");
 
   popup.classList.add("show");
 
@@ -43,3 +43,32 @@ function copy() {
     popup.classList.remove("show");
   }, 2000);
 };
+
+// 3D Hover Box
+const boxes = document.querySelectorAll(".box");
+
+boxes.forEach(box => {
+  box.addEventListener("mousemove", (e) => {
+    const rect = box.getBoundingClientRect();
+
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+
+    const rotateX = -(y - centerY) / 50;
+    const rotateY = (x - centerX) / 50;
+
+    box.style.transform = `
+      perspective(1500px)
+      rotateX(${rotateX}deg)
+      rotateY(${rotateY}deg)
+      scale(1.02)
+    `;
+  });
+
+  box.addEventListener("mouseleave", () => {
+    box.style.transform = "perspective(1000px) rotateX(0) rotateY(0)";
+  });
+});

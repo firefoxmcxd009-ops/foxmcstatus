@@ -19,6 +19,7 @@ async function getStatus() {
             text.style.display = "none";
 
             document.getElementById("serverIP").innerText = ip;
+            document.getElementById("port").innerText = "Port: " + data.port || "Unknown";
             document.getElementById("version").innerText = "Version: " + data.version;
             document.getElementById("players").innerText = "Players: " + data.players.online + "/" + data.players.max;
 

@@ -79,6 +79,11 @@ button:hover {
     animation: fadeIn 0.5s ease;
 }
 
+.card, #serverIP, #version, #port, #payers, p {
+    font-family: sans-serif;
+    font-weight: bolder;
+}
+
 img {
     position: relative;
     margin: auto;
