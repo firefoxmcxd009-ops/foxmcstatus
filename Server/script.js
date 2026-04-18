@@ -44,7 +44,7 @@ function parseMotd(text) {
 }
 
 async function updateServerStatus() {
-  const apiUrl = "https://api.mcsrvstat.us/3/foxmckingdom.apsara.fun";
+  const apiUrl = "https://api.mcsrvstat.us/3/foxmckingdom.mcpc.ink";
   try {
     const response = await fetch(apiUrl);
     const data = await response.json();
