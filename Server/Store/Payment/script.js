@@ -2,11 +2,11 @@
 // QR Images
 // ==========================
 const qrImages = {
-    vip: "/Server/Store/payment/qr/vip.png",
-    mvp: "/Server/Store/payment/qr/mvp.png",
-    mvpplus: "/Server/Store/payment/qr/mvpplus.png",
-    epic: "/Server/qr/Store/payment/epic.png",
-    kingdom: "/Server/Store/payment/qr/kingdom.png"
+    vip: "/Server/Store/Payment/qr/vip.png",
+    mvp: "/Server/Store/Payment/qr/mvp.png",
+    mvpplus: "/Server/Store/Payment/qr/mvpplus.png",
+    epic: "/Server/qr/Store/Payment/epic.png",
+    kingdom: "/Server/Store/Payment/qr/kingdom.png"
 };
 
 // ==========================
